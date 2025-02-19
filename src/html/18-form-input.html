@@ -12,18 +12,41 @@
     <form action="/">
       <fieldset>
         <legend>폼 서식</legend>
+
         <div>
+          <!-- for 고유의 id, 하나만 존재 해야함 -->
           <label for="userName">이름</label>
-          <input type="text" id="userName" />
+
+          <!-- required는 논리 속성입니다 , 필수 입력요소라고 정하는 겁니다.-->
+          <!-- 그럼 이걸 입력을 안하고 전송버튼을 누르면 안됩니다. -->
+
+          <!-- name은 이 데이터를 서버로 전달할때 데이터를 담을 변수입니다. -->
+          <input type="text" id="userName" name="userName" required />
         </div>
+
         <div>
+          <!-- placeholder 입력 힌트 입니다. 입력창 뒤에 글자 적혀있는 그 기능입니다. -->
           <label for="userPwd">비밀번호</label>
-          <input type="password" id="userPwd" />
+          <input
+            type="password"
+            id="userPwd"
+            required
+            placeholder="비밀번호를 입력해 주세요"
+          />
         </div>
+
         <div>
           <label for="likelionSearch">검색</label>
           <input type="search" id="likelionSearch" />
         </div>
+
+        <div>
+          <label for="userEmail">이메일</label>
+          <input type="email" id="userName" />
+        </div>
+
+        <!-- submit는 action에 적혀있는 서버로 데이터를 전송하는 역활을 한다. -->
+        <input type="submit" value="전송" />
       </fieldset>
     </form>
   </body>
